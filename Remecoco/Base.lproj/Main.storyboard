@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oqg-5s-P0a">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Remecoco-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Remecoco" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Chb-gC-e4x">
+                                <rect key="frame" x="174.5" y="280" width="65" height="336"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgs-tz-CBo">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="65.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" image="mic.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="55"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="psD-Hn-g6R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEX-V2-xIt">
+                                        <rect key="frame" x="0.0" y="99.5" width="65" height="63"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" image="stop.circle.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="55"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RD2-8r-65o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehL-xE-WlQ">
+                                        <rect key="frame" x="0.0" y="196.5" width="65" height="53.5"/>
+                                        <state key="normal" image="play.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="55"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playRecordedSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Laa-gI-SBN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1y-Ga-PGo">
+                                        <rect key="frame" x="0.0" y="284" width="65" height="52"/>
+                                        <state key="normal" image="pause.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="55"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lUi-d2-jMu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-6b-JDX">
+                                <rect key="frame" x="165" y="712.5" width="84.5" height="59.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FPt-6b-JDX" secondAttribute="height" multiplier="84:59" id="qvH-h7-KfP"/>
+                                </constraints>
+                                <state key="normal" image="tray.full.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="60"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ojy-ri-JOk" kind="show" identifier="segueToTablevVew" id="XN4-p8-qo1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Chb-gC-e4x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GpE-2r-cib"/>
+                            <constraint firstItem="FPt-6b-JDX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NL8-zj-ylS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FPt-6b-JDX" secondAttribute="bottom" constant="90" id="fbH-b1-BfL"/>
+                            <constraint firstItem="Chb-gC-e4x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lG4-1w-ZfI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Remecoco" largeTitleDisplayMode="always" id="7tx-t4-lXP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="-591"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IwG-1K-Zmw">
+            <objects>
+                <navigationController id="oqg-5s-P0a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wBW-Os-0iv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yfi-Ik-DH3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WkQ-KF-pl6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-591"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="XJF-Ib-LL1">
+            <objects>
+                <tableViewController id="ojy-ri-JOk" customClass="TableViewController" customModule="Remecoco" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xst-6Z-qQ0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="79" id="3sC-oo-x0z" customClass="TableViewCell" customModule="Remecoco" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="79"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3sC-oo-x0z" id="rgn-wn-fwR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wI-qC-L9u">
+                                            <rect key="frame" x="20" y="11" width="374" height="57"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8wI-qC-L9u" secondAttribute="trailing" id="5Vy-Uw-ZXJ"/>
+                                        <constraint firstItem="8wI-qC-L9u" firstAttribute="top" secondItem="rgn-wn-fwR" secondAttribute="topMargin" id="6MT-8D-zPx"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8wI-qC-L9u" secondAttribute="bottom" id="YYs-Yb-oq5"/>
+                                        <constraint firstItem="8wI-qC-L9u" firstAttribute="leading" secondItem="rgn-wn-fwR" secondAttribute="leadingMargin" id="nRA-ek-do0"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellText" destination="8wI-qC-L9u" id="OYa-Sv-p4K"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ojy-ri-JOk" id="Q3Y-s7-cA4"/>
+                            <outlet property="delegate" destination="ojy-ri-JOk" id="W35-Pz-Ydz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="List" largeTitleDisplayMode="always" id="9gu-cH-1Hf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNC-wW-bue" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765" y="-591"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mic.fill" catalog="system" width="108" height="128"/>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="stop.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="tray.full.fill" catalog="system" width="128" height="88"/>
+    </resources>
+</document>
